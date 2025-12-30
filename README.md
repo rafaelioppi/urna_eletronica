@@ -1,7 +1,3 @@
-# urna_eletronica
-qui está um README.md completo para o seu projeto de simulação de votação com Spring Boot, H2 e Thymeleaf.
-
-markdown
 # 🗳️ Simulação de Votação Eletrônica (Spring Boot + H2 + Thymeleaf)
 
 Este projeto é uma **simulação educacional** de um sistema de votação eletrônica, desenvolvido em **Java 17** com **Spring Boot**, **Spring Data JPA**, **H2 Database** e **Thymeleaf**.  
