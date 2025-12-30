@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado da Votação</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    table { border-collapse: collapse; }
+    td, th { border: 1px solid #ddd; padding: 0.5rem 0.75rem; }
+    .ok { color: #0a7; } .erro { color: #c00; }
+  </style>
+</head>
+<body>
+  <h1>Apuração</h1>
+
+  <table>
+    <thead>
+      <tr><th>Candidato</th><th>Total</th></tr>
+    </thead>
+    <tbody>
+      <tr th:each="entry : ${totais}">
+        <td th:text="${entry.key}"></td>
+        <td th:text="${entry.value}"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Qtd votos:</strong> <span th:text="${qtdVotos}"></span></p>
+  <p><strong>Hash final:</strong> <span th:text="${hashFinal}"></span></p>
+  <p><strong>Cadeia válida:</strong>
+    <span th:if="${cadeiaValida}" class="ok">Sim</span>
+    <span th:unless="${cadeiaValida}" class="erro">Não</span>
+  </p>
+
+  <p><a href="/">Voltar</a></p>
+</body>
+</html>
